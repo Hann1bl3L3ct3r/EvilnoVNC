@@ -43,4 +43,4 @@ RUN wget "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snap
 
 ENTRYPOINT ["/bin/bash", "-c", "/home/user/startVNC.sh"]
 
-EXPOSE 80
+EXPOSE 80 443

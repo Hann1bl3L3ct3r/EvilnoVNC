@@ -35,9 +35,9 @@ sudo docker build -t joelgmsec/evilnovnc .
 
   ---------------- by @JoelGMSec --------------
 
-Usage:  ./start.sh $resolution $url
+Usage:  ./start.sh $resolution $url [--ssl-cert PATH --ssl-key PATH]
 
-Examples:
+Examples (HTTP on :80, default):
         1280x720  16bits: ./start.sh 1280x720x16 http://example.com
         1280x720  24bits: ./start.sh 1280x720x24 http://example.com
         1920x1080 16bits: ./start.sh 1920x1080x16 http://example.com
@@ -46,7 +46,24 @@ Examples:
 Dynamic resolution:
         ./start.sh dynamic http://example.com
 
+HTTPS on :443 (optional):
+        ./start.sh dynamic http://example.com --ssl-cert ./certs/fullchain.pem --ssl-key ./certs/privkey.pem
+
 ```
+
+### HTTPS / TLS
+
+When `--ssl-cert` and `--ssl-key` are supplied, EvilnoVNC listens on TCP/443 with TLS instead of TCP/80
+plaintext. Both flags must be passed together. Paths must point to PEM-encoded files on the host; they
+are bind-mounted read-only into the container. noVNC's client picks up `wss://` automatically once the
+landing page is served over HTTPS, so no frontend changes are required.
+
+```
+sudo ./start.sh dynamic http://example.com \
+  --ssl-cert /etc/letsencrypt/live/phish.example.org/fullchain.pem \
+  --ssl-key  /etc/letsencrypt/live/phish.example.org/privkey.pem
+```
+
 
 ### The detailed guide of use can be found at the following link:
 

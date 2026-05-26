@@ -1,0 +1,22 @@
+# Runtime exfil collected during engagements
+Downloads/*
+!Downloads/.deleteme
+
+# TLS material — never commit
+*.pem
+*.key
+*.crt
+*.cer
+*.pfx
+*.p12
+
+# Local secrets / env files
+.env
+.env.*
+*.local
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
