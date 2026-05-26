@@ -103,7 +103,7 @@ else
     LISTEN_URL="http://localhost"
 fi
 
-DOCKER_ARGS+=(--name evilnovnc joelgmsec/evilnovnc)
+DOCKER_ARGS+=(--name evilnovnc hann1bl3l3ct3r/evilnovnc)
 
 if [[ $RESOLUTION != dynamic ]]; then
     echo $RESOLUTION > /tmp/resolution.txt

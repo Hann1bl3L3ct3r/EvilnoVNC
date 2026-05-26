@@ -1,4 +1,4 @@
-<p align="center"><img width=600 alt="EvilnoVNC" src="https://github.com/JoelGMSec/EvilnoVNC/blob/main/EvilnoVNC.png"></p>
+<p align="center"><img width=600 alt="EvilnoVNC" src="https://github.com/Hann1bl3L3ct3r/EvilnoVNC/blob/main/EvilnoVNC.png"></p>
 
 # EvilnoVNC
 **EvilnoVNC** is a Ready to go Phishing Platform. 
@@ -17,9 +17,9 @@ In addition, this tool allows us to see in real time all of the victim's actions
 It's recommended to clone the complete repository or download the zip file.\
 Additionally, it's necessary to build Docker manually. You can do this by running the following commands:
 ```
-git clone https://github.com/JoelGMSec/EvilnoVNC
+git clone https://github.com/Hann1bl3L3ct3r/EvilnoVNC
 cd EvilnoVNC ; sudo chown -R 103 Downloads
-sudo docker build -t joelgmsec/evilnovnc .
+sudo docker build -t hann1bl3l3ct3r/evilnovnc .
 ```
 
 
@@ -65,10 +65,6 @@ sudo ./start.sh dynamic http://example.com \
 ```
 
 
-### The detailed guide of use can be found at the following link:
-
-https://darkbyte.net/robando-sesiones-y-bypasseando-2fa-con-evilnovnc
-
 # Features & To Do
 - [X] Export Evil-Chromium profile to host
 - [X] Save download files on host
@@ -97,13 +93,5 @@ Special thanks to [@ms101](https://github.com/ms101) for some fixes and improvem
 Special thanks to [@git-it](https://github.com/git-it) for User-agent and Accept-Language patch.
 
 
-# Contact
-This software does not offer any kind of guarantee. Its use is exclusive for educational environments and / or security audits with the corresponding consent of the client. I am not responsible for its misuse or for any possible damage caused by it.
-
-For more information, you can find me on Twitter as [@JoelGMSec](https://twitter.com/JoelGMSec) and on my blog [darkbyte.net](https://darkbyte.net).
-
-
-# Support
-You can support my work buying me a coffee:
-
-[<img width=250 alt="buymeacoffe" src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png">](https://www.buymeacoffee.com/joelgmsec)
+# Disclaimer
+This software does not offer any kind of guarantee. Its use is exclusive for educational environments and / or security audits with the corresponding consent of the client. The fork maintainer is not responsible for its misuse or for any possible damage caused by it.
