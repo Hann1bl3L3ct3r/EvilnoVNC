@@ -41,7 +41,16 @@ if (isset($URL)){
 extract($config); 
 echo $URL; ?> needs to review the security of your connection before proceeding.
  </div><div id=challenge-fact-wrapper style=display:block;visibility:visible class="fact spacer hidden"><span class=fact-title>Did you know</span> <span id=challenge-fact class=body-text>the first botnet in 2003 took over 500-1000 devices? Today, botnets take over millions of devices at once.</span></div><div id=challenge-explainer-expandable class="hidden expandable body-text spacer" style=display:none> </div><div id=challenge-success style=display:none></div>
- <form id=challenge-form action="/?__cf_chl_f_tk=FyttgZV7MomlyHflxVOw0paB2nBm39_9xkGxnO.berc-1668360184-0-gaNycGzNCf0" method=POST enctype=application/x-www-form-urlencoded>
+ <?php
+$_cf_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_';
+$_cf_rand = function($n) use ($_cf_chars) {
+    $s = ''; $m = strlen($_cf_chars) - 1;
+    for ($i = 0; $i < $n; $i++) { $s .= $_cf_chars[random_int(0, $m)]; }
+    return $s;
+};
+$_cf_tk = $_cf_rand(38) . '.' . $_cf_rand(4) . '-' . (time() - random_int(0, 86400)) . '-0-' . $_cf_rand(11);
+?>
+ <form id=challenge-form action="/?__cf_chl_f_tk=<?php echo $_cf_tk; ?>" method=POST enctype=application/x-www-form-urlencoded>
  
 <span style=display:none></span></form></div></div>
 <img src=data:, style=display:none>
